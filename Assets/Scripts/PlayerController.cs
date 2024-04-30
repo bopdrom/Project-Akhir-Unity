@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 	{
 		PlayerPrefs.SetInt("Turn", 40);
 		rb = GetComponent<Rigidbody2D>();
-		//obj = GetComponent<Object>();
 		boxCol = GetComponent<BoxCollider2D>();
 		posisiAwal = transform.position;
 		posisiAkhir = posisiAwal;
@@ -67,31 +66,11 @@ public class PlayerController : MonoBehaviour
 				posisiAwal = transform.position;
 			}
 		}
-		print("left = " + Left.wallLeft);
-		print("right = " + Right.wallRight);
-		print("top = " + Top.wallTop);
-		print("bottom = " + Bottom.wallBottom);
+		//print("left = " + Left.wallLeft);
+		//print("right = " + Right.wallRight);
+		//print("top = " + Top.wallTop);
+		//print("bottom = " + Bottom.wallBottom);
 	}
-
-	/*private void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.tag == "Batas")
-		{
-			//Debug.Log("Max Batas");
-			gerak = false;
-			batas = true;
-			Debug.Log(batas);
-		}
-	}
-
-	private void OnTriggerExit2D(Collider2D col)
-	{
-		if (col.transform.CompareTag("Batas"))
-		{
-			batas = false;
-			Debug.Log(batas);
-		}
-	}*/
 
 	void Turn()
 	{

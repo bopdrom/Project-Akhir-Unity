@@ -6,6 +6,6 @@ public class LeftCol : MonoBehaviour
 {
 	private void OnTriggerEnter2D(Collider2D LeftCol)
 	{
-		transform.parent.GetComponent<Enemy>().CollisionDetectedL(this);
+		transform.parent.GetComponent<EnemyCol>().CollisionDetectedL(this);
 	}
 }

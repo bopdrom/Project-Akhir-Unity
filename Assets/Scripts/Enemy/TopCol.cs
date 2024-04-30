@@ -6,6 +6,6 @@ public class TopCol : MonoBehaviour
 {
 	private void OnTriggerEnter2D(Collider2D TopCol)
 	{
-		transform.parent.GetComponent<Enemy>().CollisionDetectedT(this);
+		transform.parent.GetComponent<EnemyCol>().CollisionDetectedT(this);
 	}
 }
