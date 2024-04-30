@@ -26,8 +26,9 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!gerak)
 		{
-			if (Input.GetKeyDown(KeyCode.D) && Right.wallRight == false)
+			if (Input.GetKeyDown(KeyCode.D) && BatasKanan.wallKanan == false)
 			{
+<<<<<<< Updated upstream
 				if (KenaKiri.kena)
 				{
 					gerak = false;
@@ -36,27 +37,49 @@ public class PlayerController : MonoBehaviour
 				gerak = true;
 				//boxCol.offset = new Vector2(0.30f, 0f);
 				Turn();
+=======
+				if(KenaKiri.kena){
+					gerak = false;
+				}else{
+					posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(0.30f, 0f);
+					//Turn();
+				}
+>>>>>>> Stashed changes
 			}
-			else if (Input.GetKeyDown(KeyCode.A) && Left.wallLeft == false)
+			else if (Input.GetKeyDown(KeyCode.A) && BatasKiri.wallKiri == false)
 			{
-				posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
-				gerak = true;
-				//boxCol.offset = new Vector2(-0.30f, 0f);
-				Turn();
+				if(KenaKanan.kena){
+					gerak = false;
+				}else{
+					posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(0.30f, 0f);
+					//Turn();
+				}
 			}
-			else if (Input.GetKeyDown(KeyCode.W) && Top.wallTop == false)
+			else if (Input.GetKeyDown(KeyCode.W) && BatasAtas.wallAtas == false)
 			{
+				if(KenaBawah.kena){
+					gerak = false;
+				}else{
 				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
 				gerak = true;
 				//boxCol.offset = new Vector2(0f, 0.30f);
-				Turn();				
+				//Turn();	
+				}			
 			}
-			else if (Input.GetKeyDown(KeyCode.S) && Bottom.wallBottom == false)
+			else if (Input.GetKeyDown(KeyCode.S) && BatasBawah.wallBawah == false)
 			{
+				if(KenaAtas.kena){
+					gerak = false;
+				}else{
 				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
 				gerak = true;
 				//boxCol.offset = new Vector2(0f, -0.30f);
-				Turn();
+				//Turn();
+				}
 			}
 		}
 		if (gerak)
@@ -70,12 +93,35 @@ public class PlayerController : MonoBehaviour
 				posisiAwal = transform.position;
 			}
 		}
+<<<<<<< Updated upstream
 		//print("left = " + Left.wallLeft);
 		//print("right = " + Right.wallRight);
 		//print("top = " + Top.wallTop);
 		//print("bottom = " + Bottom.wallBottom);
 	}
 
+=======
+		//Debug.Log(Batas.wall);
+	}
+
+	private void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.tag == "Enemy")
+		{
+			Debug.Log("Kena");
+		}
+	}
+
+	/*private void OnTriggerExit2D(Collider2D col)
+	{
+		if (col.transform.CompareTag("Batas"))
+		{
+			batas = false;
+			Debug.Log(batas);
+		}
+	}*/
+
+>>>>>>> Stashed changes
 	void Turn()
 	{
 		int turn = PlayerPrefs.GetInt("Turn");

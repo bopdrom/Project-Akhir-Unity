@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 614435c4d892f594bb07ff98f10a9c5f
+=======
+<<<<<<<< Updated upstream:Assets/Scripts/Enemy.meta
+guid: 1e6e033c1ae3ff64188945888b8512f7
+========
+guid: 35df183a38c599a49b2efc59afc9bb2f
+>>>>>>>> Stashed changes:Assets/Scripts/Enemy1.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
