@@ -31,32 +31,54 @@ public class PlayerController : MonoBehaviour
 				if (KenaKiri.kena)
 				{
 					gerak = false;
+				}else{
+					posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(0.30f, 0f);
+					Turn();
 				}
-				posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
-				gerak = true;
-				//boxCol.offset = new Vector2(0.30f, 0f);
-				Turn();
 			}
 			else if (Input.GetKeyDown(KeyCode.A) && Left.wallLeft == false)
 			{
-				posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
-				gerak = true;
-				//boxCol.offset = new Vector2(-0.30f, 0f);
-				Turn();
+				if (KenaKanan.kena)
+				{
+					gerak = false;
+				}
+				else
+				{
+					posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(-0.30f, 0f);
+					Turn();
+				}
 			}
 			else if (Input.GetKeyDown(KeyCode.W) && Top.wallTop == false)
 			{
-				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
-				gerak = true;
-				//boxCol.offset = new Vector2(0f, 0.30f);
-				Turn();				
+				if (KenaBawah.kena)
+				{
+					gerak = false;
+				}
+				else
+				{
+					posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(0f, 0.30f);
+					Turn();
+				}	
 			}
 			else if (Input.GetKeyDown(KeyCode.S) && Bottom.wallBottom == false)
 			{
-				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
-				gerak = true;
-				//boxCol.offset = new Vector2(0f, -0.30f);
-				Turn();
+				if (KenaAtas.kena)
+				{
+					gerak = false;
+				}
+				else
+				{
+					posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
+					gerak = true;
+					//boxCol.offset = new Vector2(0f, -0.30f);
+					Turn();
+				}
 			}
 		}
 		if (gerak)
