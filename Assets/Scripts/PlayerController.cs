@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.D) && Right.wallRight == false)
 			{
+				if (KenaKiri.kena)
+				{
+					gerak = false;
+				}
 				posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
 				gerak = true;
 				//boxCol.offset = new Vector2(0.30f, 0f);
