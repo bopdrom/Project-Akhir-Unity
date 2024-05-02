@@ -2469,7 +2469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476032570}
   - component: {fileID: 476032572}
-  - component: {fileID: 476032575}
+  - component: {fileID: 476032573}
   m_Layer: 0
   m_Name: TopCol
   m_TagString: Untagged
@@ -2537,7 +2537,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &476032575
+--- !u!114 &476032573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6918,7 +6918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176543802}
   - component: {fileID: 1176543804}
-  - component: {fileID: 1176543807}
+  - component: {fileID: 1176543805}
   m_Layer: 0
   m_Name: BottomCol
   m_TagString: Untagged
@@ -6986,7 +6986,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &1176543807
+--- !u!114 &1176543805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9894,7 +9894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830743224}
   - component: {fileID: 1830743225}
-  - component: {fileID: 1830743228}
+  - component: {fileID: 1830743226}
   m_Layer: 0
   m_Name: LeftCol
   m_TagString: Untagged
@@ -9962,7 +9962,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1830743228
+--- !u!114 &1830743226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10572,7 +10572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003450567}
   - component: {fileID: 2003450568}
-  - component: {fileID: 2003450571}
+  - component: {fileID: 2003450569}
   m_Layer: 0
   m_Name: RightCol
   m_TagString: Untagged
@@ -10640,7 +10640,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2003450571
+--- !u!114 &2003450569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
