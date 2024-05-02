@@ -11,15 +11,12 @@ public class Pause : MonoBehaviour
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape)){
             pauseMenu();
+        }else if(Input.GetKeyDown(KeyCode.R)){
+            SceneManager.LoadScene(level);
         }
     }
 
     public void pauseMenu(){
-		objectToToggle.SetActive(true);
-		Time.timeScale = 0f;
-	}
-
-    public void pause(){
 		objectToToggle.SetActive(true);
 		Time.timeScale = 0f;
 	}
