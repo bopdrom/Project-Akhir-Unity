@@ -21,20 +21,20 @@ public class Enemy : MonoBehaviour
             {
                 posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
                 gerak = true;
-                darahEnemy = darahEnemy - 5;
+                darahEnemy = darahEnemy - 4;
             }else if(Input.GetKeyDown(KeyCode.A) && KenaKanan.kena)
             {
                 posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
                 gerak = true;
-                darahEnemy = darahEnemy - 5;
+                darahEnemy = darahEnemy - 4;
             }else if(Input.GetKeyDown(KeyCode.W) && KenaBawah.kena){
                 posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
                 gerak = true;
-                darahEnemy = darahEnemy - 5;
+                darahEnemy = darahEnemy - 4;
             }else if(Input.GetKeyDown(KeyCode.S) && KenaAtas.kena){
                 posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
                 gerak = true;
-                darahEnemy = darahEnemy - 5;
+                darahEnemy = darahEnemy - 4;
             }
         }
 
