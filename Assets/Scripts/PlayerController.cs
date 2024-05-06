@@ -28,7 +28,9 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.D) && Right.wallRight == false)
 			{
-				if(KenaKiri.kena){
+
+				if (KenaKiri.kena)
+				{
 					gerak = false;
 				}else{
 					posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
