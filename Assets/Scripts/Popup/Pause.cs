@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public GameObject objectToToggle;
-    public string level = "";
+    public string level = "Level1Fix";
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape)){
             pauseMenu();
         }else if(Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene(level);
+            SceneManager.LoadScene("Level1Fix");
         }
     }
 
