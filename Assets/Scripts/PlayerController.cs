@@ -28,12 +28,11 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.D) && Right.wallRight == false)
 			{
+
 				if (KenaKiri.kena)
 				{
 					gerak = false;
-				}
-				else
-				{
+				}else{
 					posisiAkhir = new Vector3(posisiAwal.x + 1f, transform.position.y, 0f);
 					gerak = true;
 					//boxCol.offset = new Vector2(0.30f, 0f);
@@ -42,44 +41,35 @@ public class PlayerController : MonoBehaviour
 			}
 			if (Input.GetKeyDown(KeyCode.A) && Left.wallLeft == false)
 			{
-				if (KenaKanan.kena)
-				{
+				if(KenaKanan.kena){
 					gerak = false;
-				}
-				else
-				{
+				}else{
 					posisiAkhir = new Vector3(posisiAwal.x + -1f, transform.position.y, 0f);
 					gerak = true;
 					//boxCol.offset = new Vector2(0.30f, 0f);
-					Turn();
+					//Turn();
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.W) && Top.wallTop == false)
 			{
-				if (KenaBawah.kena)
-				{
+				if(KenaBawah.kena){
 					gerak = false;
-				}
-				else
-				{
-					posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
-					gerak = true;
-					//boxCol.offset = new Vector2(0.30f, 0f);
-					Turn();
-				}
+				}else{
+				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + 1f, 0f);
+				gerak = true;
+				//boxCol.offset = new Vector2(0f, 0.30f);
+				//Turn();	
+				}			
 			}
 			if (Input.GetKeyDown(KeyCode.S) && Bottom.wallBottom == false)
 			{
-				if (KenaAtas.kena)
-				{
+				if(KenaAtas.kena){
 					gerak = false;
-				}
-				else
-				{
-					posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
-					gerak = true;
-					//boxCol.offset = new Vector2(0.30f, 0f);
-					Turn();
+				}else{
+				posisiAkhir = new Vector3(transform.position.x, posisiAwal.y + -1f, 0f);
+				gerak = true;
+				//boxCol.offset = new Vector2(0f, -0.30f);
+				//Turn();
 				}
 			}
 		}
