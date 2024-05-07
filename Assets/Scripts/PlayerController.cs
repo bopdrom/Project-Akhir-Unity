@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.D) && Right.wallRight == false)
 			{
-
 				if (KenaKiri.kena)
 				{
 					gerak = false;
@@ -85,7 +84,6 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
-
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
